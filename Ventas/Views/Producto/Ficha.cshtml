@@ -1,0 +1,45 @@
+﻿@model  Ventas.Models.PRODUCTO
+@{
+    ViewBag.Title = "Ficha";
+}
+
+<h2>Ficha Producto</h2>
+<fieldset class="form-horizontal">
+    <legend class="label">Informacion de Productos</legend>
+
+    <label class="control-label">Codigo</label>
+    <div class="form-group">
+        <div class="label"> Codigo de Barra </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.CodigoBarra)</div>
+    </div>
+
+    <label class="control-label">Nombre</label>
+    <div class="form-group">
+        <div class="label"> Nombre </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.Nombre)</div>
+    </div>
+
+    <label class="control-label">Familia</label>
+    <div class="form-group">
+        <div class="label"> Familia </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.Familia)</div>
+    </div>
+
+    <label class="control-label">Precio</label>
+    <div class="form-group">
+        <div class="label"> Precio </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.Precio)</div>
+    </div>
+    <label class="control-label">Descuento Tope</label>
+    <div class="form-group">
+        <div class="label"> Descuento </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.DescuentoTope)</div>
+    </div>
+    <label class="control-label">DEscripcion</label>
+    <div class="form-group">
+        <div class="label"> Descripcion </div>
+        <div class="text-muted">@Html.DisplayFor(m => m.Descripcion)</div>
+    </div>
+
+</fieldset>
+

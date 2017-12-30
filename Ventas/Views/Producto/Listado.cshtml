@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Ventas.Models.PRODUCTO>
+@{
+    ViewBag.Title = "Listado";
+}
+
+<h2>Listado</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+    <th>CodigoBarra</th>
+    <th>Nombre</th>
+    <th>Familia</th>
+    <th>Precio</th>
+    <th>DescuentoTope</th>
+    <th>Descripcion</th>
+
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(m => a.CodigoBarra)</td>
+                <td>@Html.DisplayFor(m => a.Nombre)</td>
+                <td>@Html.DisplayFor(m => a.Familia)</td>
+                <td>@Html.DisplayFor(m => a.Precio)</td>
+                <td>@Html.DisplayFor(m => a.DescuentoTope)</td>
+                <td>@Html.DisplayFor(m => a.Descripcion)</td>
+                <td>@Html.ActionLink("Visualizar", "Ver", new { codigobarra = a.CodigoBarra})</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+

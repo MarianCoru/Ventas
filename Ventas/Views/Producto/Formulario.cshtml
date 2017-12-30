@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Formulario";
+}
+
+<h2>Formulario</h2>
+<fieldset>
+    <legend>Ingreso de productos</legend>
+    @using (@Html.BeginForm("Guardar", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+
+        <div class="form-group">
+            <span class="col-md-2">
+                Codigo de barra
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("codigobarra", null, new { @class = "form-control", placeholder = "Ingresar codigo" })
+            </span>
+        </div>
+
+        <div class="form-group">
+            <span class="col-md-2">
+                Nombre
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("nombre", null, new { @class = "form-control", placeholder = "Ingresar nombre" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Familia
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("familia", null, new { @class = "form-control", placeholder = "Ejemplo: Lácteos, Embutidos" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Precio $
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("precio", null, new { @class = "form-control", placeholder = "Ingresar precio " })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Descuento Tope %
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("descuentotope", null, new { @class = "form-control", placeholder = "Ejemplo 10"})
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                 Breve descripción
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("descripcion", null, new { @class = "form-control", placeholder = "Ejemplo" })
+            </span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+
+    }
+</fieldset>
